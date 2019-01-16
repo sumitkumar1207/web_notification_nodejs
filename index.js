@@ -14,8 +14,6 @@ app.use(express.static(path.join(__dirname, "client")));
 //BodyParser middleware
 app.use(bodyParser.json());
 
-// ./node_modules/.bin/web-push generate-vapid-keys (to generate the keys)
-
 webpush.setVapidDetails('mailto: sumit@binarynumbers.io', publicVapidKey, privateVapidKey);
 
 //Subscribe Route
